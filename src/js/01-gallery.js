@@ -1,16 +1,10 @@
-// import SimpleLightbox from "simplelightbox";
-// import "simplelightbox/dist/simple-lightbox.min.css";
+import SimpleLightbox from "simplelightbox";
+import "simplelightbox/dist/simple-lightbox.min.css";
 // Add imports above this line
 import { galleryItems } from './gallery-items';
 // Change code below this line
 
-
-// npm install simplelightbox
-
-
  const gallery = document.querySelector('.gallery')
-
-
 
 const galleryItem = galleryItems.map(item => {
     
@@ -25,16 +19,9 @@ const galleryItem = galleryItems.map(item => {
 gallery.insertAdjacentHTML('beforeend', galleryItem);
 
 
-// const shower = new SimpleLightbox(".gallery a", {
-//     captionsData: 'alt',
-//     captionsDelay: 250
-//  })
-
-
-
-
-gallery.addEventListener('click', (e) => {
-    e.preventDefault()
-} )
+let showing = new SimpleLightbox('.gallery a', {
+    captionDelay: 250,
+    captionsData: 'alt'
+});
 
 console.log(galleryItems);
