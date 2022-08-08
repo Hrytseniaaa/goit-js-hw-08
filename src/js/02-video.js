@@ -21,3 +21,4 @@ player.setCurrentTime(parsedTime.currentTime).then(function (seconds) {
     
 });
 
+
