@@ -52,8 +52,11 @@ function showInputValue(evt) {
 
 function getSubmitForm(evt) {
     evt.preventDefault();
-    evt.currentTarget.reset();
     localStorage.removeItem('feedback-form-state')
+    if (message.value.length !== 0 && email.value.length !== 0) {
+        evt.currentTarget.reset();
+        
+    }
 };
 
 
